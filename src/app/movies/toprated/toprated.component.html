@@ -1,0 +1,37 @@
+<div class="panel"> 
+  <div class="panel-heading">Movies</div>
+  <div class="panel-heading">
+    <div >
+        <table  class="table table-bordered">
+          <tr>
+            <th>
+              Title
+            </th>
+            <th>Poster</th>
+            <th>Description</th>
+            <th>Release</th>
+            <th>status</th>
+            <th>Rating</th>
+            
+            
+          </tr>
+          <tr *ngFor= "let movie of topmovies">
+            <td>
+                <a href="#">
+                    {{movie.title}}
+                </a>
+              
+            </td>
+            <td>
+              <img src="{{movie.backdrop_path}}" alt="img" width="100px">
+            </td>
+            <td>{{movie.overview}}</td>
+            <td>{{movie.release_date}}</td>
+            <td>{{movie.status}}</td>
+            <td>{{movie.rating}}</td>
+
+          </tr>
+        </table>
+    </div>
+  </div>
+</div>
